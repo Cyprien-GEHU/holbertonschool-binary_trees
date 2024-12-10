@@ -1,0 +1,19 @@
+#include "binary_trees.h"
+
+/**
+ * binary_tree_is_full - check a nodeif is full
+ * @tree : the binary tree
+ *
+ * Return: 0 is not full and 1 is full
+ */
+
+int binary_tree_is_full(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return (0);
+
+	if (tree->right != NULL && tree->left != NULL && tree->parent != NULL)
+		return (1);
+
+	return (0);
+}
